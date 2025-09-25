@@ -39,7 +39,7 @@ h2 {
     font-family: "Averia Sans Libre", sans-serif;
 }
 
-#introP {
+#introP { /*also center aligned like first heading*/
     color: #AE2012;
     text-align: center;
     font-size: 1.35em;
@@ -52,7 +52,7 @@ h2 {
     padding: 8px;
 }
 
-img.logo {
+img.logo {  /*dis makes logo 80 percent smaller than original*/
     width: 80%;
     height: auto;
 }
@@ -64,6 +64,6 @@ table, td, th{
     border-collapse: collapse;
 }
 
-td, th{
+td, th{  /*spaced out padding for border*/
     padding: 2px 4px 0 4px;
 }
