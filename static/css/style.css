@@ -1,0 +1,69 @@
+.reenie-beanie-regular {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.volkhov-regular {
+  font-family: "Volkhov", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.averia-sans-libre-regular {
+  font-family: "Averia Sans Libre", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background-color: #E9D8A6;
+}
+
+p {
+    color: #EE9B00;
+    font-size: 1em;
+    font-family: "Reenie Beanie", cursive;
+}
+
+h1 {
+    color: #AE2012;
+    font-size: 2.5em;
+    font-family: "Volkhov", serif;
+    text-align: center;
+}
+
+h2 {
+    color: #CA6702;
+    font-size: 1.7em;
+    font-family: "Averia Sans Libre", sans-serif;
+}
+
+#introP {
+    color: #AE2012;
+    text-align: center;
+    font-size: 1.35em;
+}
+
+.lists {
+    color: #005F73;
+    font-size: 1.3em;
+    border: 1px solid #0A9396;
+    padding: 8px;
+}
+
+img.logo {
+    width: 80%;
+    height: auto;
+}
+
+table, td, th{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #AE2012;
+    border-collapse: collapse;
+}
+
+td, th{
+    padding: 2px 4px 0 4px;
+}

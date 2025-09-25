@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>About Me</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Reenie+Beanie&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>My Honor Programs' Curriculum</h1>
+    <p id="introP">As an undergraduate at the University of Maryland, I am involved in 2 different honors programs. One is a living and
+    learning program that I joined as an incoming freshman, allowing me to live at Prince Frederick Hall. I applied to the Quality
+    Enhancement Systems and Teams (QUEST) Honors Program.</p>
+
     <h2>QUEST</h2>
-    <img src="https://terpconnect.umd.edu/~jbono/bmgt408c/images/quest-logo.png" width="240" height="80" alt="quest logo">
-    <p>A <strong>17 credit</strong> requirement between 4 core classes and an elective of choice. The core curriculum classes build on
+    <img class="logo" src="https://terpconnect.umd.edu/~jbono/bmgt408c/images/quest-logo.png" alt="quest logo">
+    <p>A <strong>17 credit</strong> requirement between 4 core classes and an elective of choice. The program is geared towards providing students will experiential learning
+        experiences through projects and groupwork. The core curriculum classes build on
         each other, and the middle two can be requested to be taken in reverse order, or concurrently. This culminates in a <em>capstone class</em> in order to complete the program</p>
-    <ol>
+    <ol class="lists">
         <li>BMGT/ENES290H (Previously 190H)</li>
         <li>BMGT/ENES394H (Previous 438A)</li>
         <li>BMGT/ENES390H</li>
@@ -19,10 +28,11 @@
     <p>If you want to see part of the recommendation from my BMGT490H Capstone project, look at it <a href="https://github.com/aKssup/factory-scheduler" target="_blank">published on GitHub</a></p> <!--published by Akarsh-->
 
     <h2>DCC</h2>
+    <img class="logo" href="https://honors.umd.edu/wp-content/uploads/2022/05/DCC_shield_165px.jpg" alt="dcc logo">
     <p>Standing for <em>Design Cultures and Creativity</em>, this living and learning program introduces ideas of blending innovation and creativity. A <strong>19 credit</strong> fulfillment,
     DCC requires an introductory class, a capstone preparation class, and a capstone class requirement. The other 6 credits can be fulfilled during the underclassmen years with the ability to
     choose between a list of course offerings that pertain to their focus of study or creativity. The final 3 credits must be completed in an additional way.</p>
-    <ul>
+    <ul class="lists">
         <li>HDCC105 : 3 cr</li>
         <li>HDCC106 : 3 cr</li>
         <li>HDCC208 : 3 cr</li>
