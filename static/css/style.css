@@ -17,12 +17,12 @@
 }
 
 body {
-    background-color: #E9D8A6;
+    background-color: #FBF8EF;
 }
 
 p {
     color: #EE9B00;
-    font-size: 1em;
+    font-size: 2.5em;
     font-family: "Reenie Beanie", cursive;
 }
 
@@ -47,13 +47,12 @@ h2 {
 
 .lists {
     color: #005F73;
-    font-size: 1.3em;
-    border: 1px solid #0A9396;
-    padding: 8px;
+    font-size: 2.3em;
+    font-family: "Reenie Beanie", cursive;
 }
 
-img.logo {  /*dis makes logo 80 percent smaller than original*/
-    width: 80%;
+img.logo {  /*dis makes logo 40 percent smaller than original*/
+    width: 40%;
     height: auto;
 }
 
