@@ -12,7 +12,8 @@ $(document).ready(function(){
 function displayGreeting(event) {
     event.preventDefault();
     const name = document.getElementById('nameInput').value;
-    document.getElementById('greetingMessage').innerText = `Hello, ${name}!`;
+    document.getElementById('greetingMessage').innerText = `Hello, ${name}!`; // Display greeting
+    document.getElementById('textParagraph').innerText = `Hello, ${name}!`; // Change textParagraph
 }
 
 document.getElementById('nameForm').addEventListener('submit', displayGreeting);
