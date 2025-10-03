@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/greeting.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Greeting</h1>
+
+    <p id="textParagraph">Welcome to my greeting page where you can see random information.</p>
+    <button id="changeTextButton" class="btn btn-primary">Change Text</button>
+
+    <form id="nameForm" class="mt-4">
+        <input type="text" id="nameInput" placeholder="Enter your name" class="form-control mb-2" required>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+    <div id="greetingMessage" class="mt-3"></div>
+
+    <h3>My Favorite Foods:</h3>
+    <ul id="foodList"></ul>
+
+    <!-- Checkbox for courses -->
+    <h3>Courses Taken:</h3>
+    <form id="coursesForm">
+        <div>
+            <input type="checkbox" name="courses" value="BMGT408C"> BMGT408C<br>
+            <input type="checkbox" name="courses" value="BMGT490H"> BMGT490H<br>
+            <input type="checkbox" name="courses" value="BMGT438"> BMGT438<br>
+            <input type="checkbox" name="courses" value="BMGT390H"> BMGT390H<br>
+            <input type="checkbox" name="courses" value="BMGT190H"> BMGT190H<br>
+            <button type="button" id="coursesSubmit" class="btn btn-info mt-2">Submit</button>
+        </div>
+    </form>
+
+    <h3>Bootstrap Buttons</h3>
+    <p>
+        I chose to implement Bootstrap components for several reasons:
+        <ol>
+            <li>It provides a clean and responsive design that is visual appealing.</li>
+            <li>The components maintain a consistent look across different devices and screen sizes (my biggest gripe when I had tried coding with CSS in high school). </li>
+            <li>Bootstrap components are designed with accessibility in mind, ensuring that all users can navigate and interact with the web page effectively.</li>
+        </ol>
+    </p>
+</div>
+
+<script src="{{  url_for('static', filename='js/main.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
