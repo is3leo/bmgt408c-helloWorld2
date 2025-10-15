@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/mainstyle.css') }}">
+<body>
+  <div class="container">
+      <div class="header-section">
+    <!-- Headshot -->
+        <div class="headshot-container">
+          <img src="{{ url_for('static', filename='images/main/headshot.png') }}"
+         alt="Headshot"
+         class="headshot"
+         id="headshot"
+         data-hover="{{ url_for('static', filename='images/main/pfp.png') }}">
+        </div>
+
+        <!-- Name Image -->
+        <div class="name-container">
+          <img src="{{ url_for('static', filename='images/main/name.png') }}"
+         alt="Name"
+         class="name-image"
+         id="nameImage"
+         data-hover="{{ url_for('static', filename='images/main/namespread.png') }}">
+        </div>
+      </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="/about-css" class="nav-link">
+        <img src="{{ url_for('static', filename='images/main/aboutcard.png') }}" alt="About">
+      </a>
+      <a href="/hello" class="nav-link">
+        <img src="{{ url_for('static', filename='images/main/socialscardd.png') }}" alt="Social">
+      </a>
+      <a href="/hello" class="nav-link">
+        <img src="{{ url_for('static', filename='images/main/writingcard.png') }}" alt="Projects">
+      </a>
+      <a href="/hello" class="nav-link">
+        <img src="{{ url_for('static', filename='images/main/misccard.png') }}" alt="Misc">
+      </a>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='js/mainscript.js') }}"></script>
+</body>
+</html>
