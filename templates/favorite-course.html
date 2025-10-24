@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Favorite Course{% endblock %}
+
+{% block content %}
+<h1>My Favorite Course</h1>
+
+{% if subject and course_number %}
+    <p>You entered your favorite course as: {{ subject }} {{ course_number }}</p>
+{% else %}
+    <p>No course entered yet.</p>
+{% endif %}
+
+<hr>
+
+<h3>Enter a Course</h3>
+<form method="GET" action="{{ url_for('favorite_course') }}">
+    <div class="mb-3">
+        <label for="subject" class="form-label">Subject:</label>
+        <input type="text" class="form-control" id="subject" name="subject" placeholder="BMGT">
+    </div>
+    <div class="mb-3">
+        <label for="course_number" class="form-label">Course Number:</label>
+        <input type="text" class="form-control" id="course_number" name="course_number" placeholder="408C">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
