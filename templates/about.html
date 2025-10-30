@@ -1,94 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About Me</title>
-</head>
-<body>
-    <h1>My Honor Programs' Curriculum</h1>
-    <h2>QUEST</h2>
-    <img src="https://terpconnect.umd.edu/~jbono/bmgt408c/images/quest-logo.png" width="240" height="80" alt="quest logo">
-    <p>A <strong>17 credit</strong> requirement between 4 core classes and an elective of choice. The core curriculum classes build on
-        each other, and the middle two can be requested to be taken in reverse order, or concurrently. This culminates in a <em>capstone class</em> in order to complete the program</p>
-    <ol>
-        <li>BMGT/ENES290H (Previously 190H)</li>
-        <li>BMGT/ENES394H (Previous 438A)</li>
-        <li>BMGT/ENES390H</li>
-        <li>BMGT/ENES490H</li>
-    </ol>
-    <p>If you want to see part of the recommendation from my BMGT490H Capstone project, look at it <a href="https://github.com/aKssup/factory-scheduler" target="_blank">published on GitHub</a></p> <!--published by Akarsh-->
+{% extends "base2.html" %}
 
-    <h2>DCC</h2>
-    <p>Standing for <em>Design Cultures and Creativity</em>, this living and learning program introduces ideas of blending innovation and creativity. A <strong>19 credit</strong> fulfillment,
-    DCC requires an introductory class, a capstone preparation class, and a capstone class requirement. The other 6 credits can be fulfilled during the underclassmen years with the ability to
-    choose between a list of course offerings that pertain to their focus of study or creativity. The final 3 credits must be completed in an additional way.</p>
-    <ul>
-        <li>HDCC105 : 3 cr</li>
-        <li>HDCC106 : 3 cr</li>
-        <li>HDCC208 : 3 cr</li>
-        <li>HDCC201 : 1 cr</li>
-        <li>HDCC209 : 3 cr</li>
-    </ul>
-    <p>If you want to see the project I completed for my capstone, following this <a href="https://www.canva.com/design/DAF93lhuGPc/xhRbBfdxZjZwEL9VOguvdg/view?utm_content=DAF93lhuGPc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he0f2c05a51">Canva</a> link</p> <!--magazine link-->
+{% block title %}About Me{% endblock %}
 
-    <h2>Courses I Took</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Course</th>
-        <th>Semester</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>HDCC105: Introduction to Design Cultures & Creativity </td>
-        <td>Fall 2022</td>
-      </tr>
-      <tr>
-          <td>HDCC106: Seminar in Design Cultures & Creativity - Music and Sound Abstraction</td>
-          <td>Spring 2023</td>
-      </tr>
-      <tr>
-        <td>BMGT290H: Introduction to Design and Quality</td>
-        <td>Fall 2023</td>
-      </tr>
-      <tr>
-          <td>HDCC208F: Seminar in Design Cultures & Creativity - Creativity Through Visual Communication</td>
-          <td>Fall 2023</td>
-      </tr>
-      <tr>
-          <td>HDCC201: Capstone Proposal through Design Thinking</td>
-          <td>Fall 2023</td>
-      </tr>
-      <tr>
-          <td>BMGT438A: Applied Quantitative Analysis</td>
-          <td>Spring 2024</td>
-      </tr>
-      <tr>
-        <td>BMGT390H: Designing Innovative Systems</td>
-        <td>Spring 2024</td>
-      </tr>
-      <tr>
-          <td>HDCC209: Capstone in Design Cultures & Creativity</td>
-          <td>Spring 2024</td>
-      </tr>
-      <!--study abroad semester gap-->
-      <tr>
-          <td>HDCC378: Design & Creativity Abroad - approved study abroad program</td>
-          <td>Fall 2024</td>
-      </tr>
-      <tr>
-          <td>BMGT490H: QUEST Capstone Professional Practicum</td>
-          <td>Spring 2025</td>
-      </tr>
-      <tr>
-        <td>BMGT408C: Emerging Topics in Information Systems; Quality Web Development in Business</td>
-        <td>Fall 2025</td>
-      </tr>
-    </tbody>
-  </table>
+{% block content %}
+<div class="about-container">
+    <div class="about-header">
+        <h1 class="page-title">About Me</h1>
+        <div class="title-underline"></div>
+    </div>
 
-    <p>To go back to my hello page, follow <a href="/hello">/hello</a>
-  </p>
-</body>
-</html>
+    <div class="about-content">
+        <div class="about-image-section">
+            <img src="{{ url_for('static', filename='images/about-photo.jpg') }}" alt="Profile" class="about-photo">
+            <div class="image-overlay"></div>
+        </div>
+
+        <div class="about-text-section">
+            <div class="text-block">
+                <p class="opening-paragraph">
+                    Despite currently pursuing a Bachelors of Science in Computer Science, the pursuit of my passion for design never ends, whether it be inside or outside of the classroom. At heart, I am an artist interested in the intersectionalities of identities and how people may present them. Through fashion, music, dance, and digital media, I seek how to blend various mediums as a means to capture moments of my ever-changing perspective on life simultaneously as I grow.
+                </p>
+            </div>
+
+            <div class="text-block">
+                <p class="closing-paragraph">
+                    This website explores this vision through projects that range from a fashion magazine highlighting Asian American womanhood I produced for a capstone, to my critiques on art pieces and books that I've read. With a background rooted in both creativity and community, I am able to bring a strong work ethic, an attention to detail, and a deep appreciation for purposeful design. I hope to continue crafting visual narratives that empower underrepresented voices, and envision myself in roles where artistic expression merges with impact-driven storytelling.
+                </p>
+            </div>
+
+            <div class="about-cta">
+                <a href="{{ url_for('projects') }}" class="cta-button">View My Work</a>
+                <a href="{{ url_for('contact') }}" class="cta-button secondary">Get In Touch</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills/Interests Section -->
+    <div class="interests-section">
+        <h2 class="section-title">Mediums & Interests</h2>
+        <div class="interests-grid">
+            <div class="interest-card">
+                <h3>Fashion</h3>
+                <p>Exploring identity through style and self-expression</p>
+            </div>
+            <div class="interest-card">
+                <h3>Music</h3>
+                <p>Sonic landscapes that shape emotion and memory</p>
+            </div>
+            <div class="interest-card">
+                <h3>Dance</h3>
+                <p>Movement as a form of storytelling and connection</p>
+            </div>
+            <div class="interest-card">
+                <h3>Digital Media</h3>
+                <p>Bridging technology with creative vision</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
